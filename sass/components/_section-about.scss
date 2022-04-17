@@ -1,0 +1,50 @@
+.title-box {
+    position: absolute;
+    width: 62%;
+    top: 50%;
+    font-size: 2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+
+    &__logo {
+        width: 18rem;
+    }
+
+    &__text {
+        text-transform: uppercase;
+    }
+
+    &__primary {
+        color: $color-white-light;
+
+        @include text-background--parallelogram;
+        margin-bottom: 1.6rem;
+    }
+
+    &__time {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14rem;
+
+        &--item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+
+            ion-icon {
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    &__address {
+        text-align: left;
+    }
+}

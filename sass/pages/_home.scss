@@ -1,0 +1,26 @@
+.section-about {
+    position: relative;
+    margin-top: 9.2rem;
+    height: 65rem;
+    background-image: url(../img/logo/backgroundAbout.jpg);
+    background-size: cover;
+    text-align: center;
+    font-size: 1.4rem;
+    color: $color-blue-dark;
+}
+
+.section-showdown {
+    background-size: cover;
+    background-image: linear-gradient(
+            to top,
+            rgba($color-blue-light-1, 0.3),
+            rgba($color-blue-light, 0.4)
+        ),
+        url(../img/logo/backgroundShowdown.jpg);
+}
+
+.section-slider {
+    height: 65rem;
+    background-size: cover;
+    background-image: url(../img/logo/backgroundShowdown.jpg);
+}

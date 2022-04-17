@@ -1,0 +1,55 @@
+@mixin text-background--parallelogram {
+    background-image: linear-gradient(
+        to bottom right,
+        $color-red-light,
+        $color-orange-light
+    );
+    clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0% 100%);
+    -webkit-clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0% 100%);
+    padding: 0 5rem;
+    display: inline-block;
+}
+
+@mixin text-ackground--hexagon {
+    // display: inline-block;
+    padding: 0.5rem 3rem;
+    background-image: linear-gradient(
+        to bottom right,
+        $color-red-light,
+        $color-orange-light
+    );
+    clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
+    -webkit-clip-path: polygon(
+        8% 0,
+        92% 0,
+        100% 50%,
+        92% 100%,
+        8% 100%,
+        0% 50%
+    );
+}
+
+@mixin img-logo {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0 0 30px rgba($color-blue-dark, 0.5);
+    &__logo {
+        width: 8rem;
+        margin: 0 3rem;
+    }
+}
+
+@mixin align-center {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+}

@@ -1,0 +1,107 @@
+.header {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    height: 9.2rem;
+    background-color: $color-white-light;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    &__logo-box {
+        align-items: center;
+        display: flex;
+        gap: 1.5rem;
+        margin-left: 10rem;
+    }
+
+    &__logo {
+        width: 4.6rem;
+        height: 4.6rem;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+    &__text {
+        font-weight: 700;
+        font-size: 2.4rem;
+        color: $color-blue-dark;
+    }
+
+    &__nav {
+        &--item {
+            display: flex;
+            list-style: none;
+            gap: 6rem;
+            font-size: 1.8rem;
+            font-weight: 500;
+            li a {
+                font-size: 2rem;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 0.6rem;
+                color: $color-black;
+                ion-icon {
+                    text-align: center;
+                }
+            }
+            li {
+                position: relative;
+            }
+        }
+
+        &--subnav {
+            list-style: none;
+            opacity: 0;
+            position: absolute;
+            min-width: 30rem;
+            // margin-top: 0.6rem;
+            left: 0;
+            box-shadow: 0 0 1rem rgba($color-black, 0.3);
+            border-radius: 1rem;
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            -ms-border-radius: 1rem;
+            -o-border-radius: 1rem;
+        }
+    }
+
+    button {
+        margin-right: 10rem;
+    }
+
+    //hover thì hiện navsub
+    &__nav--hover:hover > ul {
+        opacity: 1;
+        width: 100%;
+        z-index: 9999;
+        background-color: $color-white-light;
+    }
+
+    &__nav--subnav li a {
+        padding: 1rem;
+        font-size: 1.8rem;
+    }
+
+    //hover vào thẻ li trong subnav thì tô màu
+    &__nav--subnav li:hover > a {
+        background: $color-tertiary-dark;
+        opacity: 0.7;
+        color: $color-secondary-light;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+        z-index: 9999;
+    }
+}

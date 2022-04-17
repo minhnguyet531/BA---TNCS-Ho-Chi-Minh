@@ -1,0 +1,97 @@
+.footer {
+    height: 65rem;
+    background-image: linear-gradient(
+            to top,
+            rgba($color-blue-light-1, 0.2),
+            rgba($color-blue-light, 0.4)
+        ),
+        url(../img/logo/backgroundFooter.jpg);
+    background-size: cover;
+    // text-align: center;
+    font-size: 1.4rem;
+    color: $color-blue-dark;
+}
+
+.info-contact {
+    padding: 10rem 16rem;
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9rem;
+    }
+    &__box {
+        text-align: left;
+    }
+    &__logo {
+        margin-bottom: 3rem;
+        .img {
+            @include img-logo;
+        }
+    }
+
+    &__text {
+        h2 {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+        ul li {
+            list-style: none;
+            margin: 1.6rem 0;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            .icon-first {
+                font-size: 3rem;
+                text-align: center;
+            }
+
+            a {
+                text-decoration: none;
+                color: $color-grey-dark-3;
+            }
+        }
+    }
+
+    &__icons {
+        font-size: 3rem;
+        ion-icon {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+
+        .icon {
+            display: inline-block;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-0.3rem);
+                -webkit-transform: translateY(-0.3rem);
+                -moz-transform: translateY(-0.3rem);
+                -ms-transform: translateY(-0.3rem);
+                -o-transform: translateY(-0.3rem);
+                box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+            }
+        }
+    }
+
+    &__form {
+        margin: 0 5rem;
+
+        h2 {
+            margin-bottom: 3rem;
+        }
+        .form-combo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+        }
+    }
+}

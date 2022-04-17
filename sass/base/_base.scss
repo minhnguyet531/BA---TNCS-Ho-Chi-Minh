@@ -1,0 +1,18 @@
+//file này dùng để Reset CSS
+*,
+*::after,
+*::before {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    color: $color-blue-dark;
+    line-height: 1.8;
+}
