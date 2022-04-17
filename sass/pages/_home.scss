@@ -19,8 +19,24 @@
         url(../img/logo/backgroundShowdown.jpg);
 }
 
-.section-slider {
-    height: 65rem;
+.section-slider-1-col {
     background-size: cover;
-    background-image: url(../img/logo/backgroundShowdown.jpg);
+    background-image: linear-gradient(
+            to top,
+            rgba($color-blue-light-1, 0.3),
+            rgba($color-blue-light, 0.4)
+        ),
+        url(../img/logo/backgroundSlider.jpg);
+}
+
+.section-slider-2-cols {
+    height: 80rem;
+    background-size: cover;
+    background-image: linear-gradient(
+            to top,
+            rgba($color-blue-light-1, 0.3),
+            rgba($color-blue-light, 0.4)
+        ),
+        url(../img/logo/backgroundSlider.jpg);
+    position: relative;
 }
