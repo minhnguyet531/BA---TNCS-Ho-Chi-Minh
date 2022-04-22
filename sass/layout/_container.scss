@@ -1,0 +1,76 @@
+.section-about {
+    position: relative;
+    margin-top: 9.2rem;
+    height: 65rem;
+    background-image: url(../img/logo/backgroundAbout.jpg);
+    background-size: cover;
+    text-align: center;
+    font-size: 1.4rem;
+    color: $color-blue-dark;
+
+    @include respond(phone) {
+        background-size: cover;
+        margin-top: 0;
+        height: 50rem;
+        background-image: url(../img/mobile/backgroundAbout-mobile.jpg);
+    }
+}
+
+.section-showdown {
+    background-size: cover;
+    background-image: linear-gradient(
+            to top,
+            rgba($color-blue-light-1, 0.3),
+            rgba($color-blue-light, 0.4)
+        ),
+        url(../img/logo/backgroundShowdown.jpg);
+
+    @include respond(phone) {
+        background-image: linear-gradient(
+                to top,
+                rgba($color-blue-light-1, 0.3),
+                rgba($color-blue-light, 0.4)
+            ),
+            url(../img/mobile/backgroundShowdown-mobile.jpg);
+    }
+}
+
+.section-slider-1-col {
+    background-size: cover;
+    background-image: linear-gradient(
+            to top,
+            rgba($color-blue-light-1, 0.3),
+            rgba($color-blue-light, 0.4)
+        ),
+        url(../img/logo/backgroundSlider.jpg);
+
+    @include respond(phone) {
+        background-image: linear-gradient(
+                to top,
+                rgba($color-blue-light-1, 0.3),
+                rgba($color-blue-light, 0.4)
+            ),
+            url(../img/mobile/backgroundShowdown-mobile.jpg);
+    }
+}
+
+.section-slider-2-cols {
+    position: relative;
+    height: 85rem;
+    background-size: cover;
+    background-image: linear-gradient(
+            to top,
+            rgba($color-blue-light-1, 0.3),
+            rgba($color-blue-light, 0.4)
+        ),
+        url(../img/logo/backgroundSlider.jpg);
+
+    @include respond(phone) {
+        background-image: linear-gradient(
+                to top,
+                rgba($color-blue-light-1, 0.3),
+                rgba($color-blue-light, 0.4)
+            ),
+            url(../img/mobile/backgroundShowdown-mobile.jpg);
+    }
+}

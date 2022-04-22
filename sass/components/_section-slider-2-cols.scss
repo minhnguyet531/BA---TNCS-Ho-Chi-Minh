@@ -1,7 +1,7 @@
 .slider {
     &__group {
         @include align-center;
-
+        margin-top: 8rem;
         max-height: 48rem;
         max-width: 80rem;
         display: grid;
@@ -12,6 +12,17 @@
 
         .slide {
             cursor: pointer;
+            @include respond(phone) {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+            margin-top: 0;
+            width: 80%;
+            gap: 0;
         }
     }
 
@@ -20,6 +31,9 @@
         position: relative;
         overflow: hidden;
 
+        @include respond(phone) {
+            display: none;
+        }
         .slide--left {
             position: absolute;
             top: 0;
@@ -36,6 +50,10 @@
     &-img {
         width: 100%;
         height: 100%;
+
+        @include respond(phone) {
+            height: 20rem;
+        }
     }
 
     &__btn {
@@ -69,121 +87,20 @@
     }
 }
 
-// .slider {
-//     max-width: 65rem;
-//     height: 45rem;
-//     margin: 3rem auto;
-//     position: relative;
+.heading-title {
+    position: absolute;
+    left: 50%;
+    width: 70%;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    transform: translate(-50%, 0);
+    margin: 10rem 0;
+    color: $color-blue-dark;
+    text-shadow: 1px 1.6px $color-blue-light;
 
-//     overflow: hidden;
-
-//     &-header {
-//         padding-top: 10rem;
-//         text-align: center;
-//         margin-bottom: 2rem;
-
-//         h1 {
-//             font-size: 3rem;
-//             text-transform: uppercase;
-//             @include text-background--parallelogram;
-//         }
-//     }
-
-//     .slide {
-//         position: absolute;
-//         top: 0;
-//         width: 100%;
-//         height: 50rem;
-
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-
-//         /* THIS creates the animation! */
-//         transition: transform 1s;
-
-//         img {
-//             width: 100%;
-//             height: 100%;
-//             // object-fit: cover;
-//         }
-//     }
-
-//     &__btn {
-//         position: absolute;
-//         top: 50%;
-//         z-index: 10;
-
-//         border: none;
-//         background: $color-blue-light-1;
-//         font-family: inherit;
-//         color: $color-blue-dark;
-//         border-radius: 50%;
-//         height: 5.5rem;
-//         width: 5.5rem;
-//         font-size: 3.25rem;
-//         cursor: pointer;
-
-//         ion-icon {
-//             position: absolute;
-//             top: 50%;
-//             transform: translate(-50%, -50%);
-//             -webkit-transform: translate(-50%, -50%);
-//             -moz-transform: translate(-50%, -50%);
-//             -ms-transform: translate(-50%, -50%);
-//             -o-transform: translate(-50%, -50%);
-//         }
-
-//         &--left {
-//             left: 6%;
-//             transform: translate(-50%, -50%);
-//         }
-
-//         &--right {
-//             right: 6%;
-//             transform: translate(50%, -50%);
-//         }
-//     }
-
-//     &-more {
-//         text-align: center;
-
-//         h2 {
-//             font-size: 1.8rem;
-//         }
-
-//         button {
-//             font-size: 2rem;
-//             margin: 2.5rem 0;
-//         }
-//     }
-// }
-
-// .dots {
-//     position: absolute;
-//     bottom: 5%;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     display: flex;
-
-//     &__dot {
-//         border: none;
-//         background-color: $color-grey-dark-3;
-//         opacity: 0.7;
-//         height: 1rem;
-//         width: 1rem;
-//         border-radius: 50%;
-//         margin-right: 1.75rem;
-//         cursor: pointer;
-//         transition: all 0.5s;
-
-//         &:last-child {
-//             margin: 0;
-//         }
-
-//         &--active {
-//             background-color: $color-white-light;
-//             opacity: 1;
-//         }
-//     }
-// }
+    @include respond(phone) {
+        font-size: 1.6rem;
+        margin-top: 5rem;
+    }
+}

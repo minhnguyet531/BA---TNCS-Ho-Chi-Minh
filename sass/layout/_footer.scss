@@ -1,5 +1,5 @@
 .footer {
-    height: 65rem;
+    // height: 65rem;
     background-image: linear-gradient(
             to top,
             rgba($color-blue-light-1, 0.2),
@@ -10,15 +10,33 @@
     // text-align: center;
     font-size: 1.4rem;
     color: $color-blue-dark;
+
+    @include respond(phone) {
+        background-image: linear-gradient(
+                to top,
+                rgba($color-blue-light-1, 0.3),
+                rgba($color-blue-light, 0.4)
+            ),
+            url(../img/mobile/backgroundFooter-mobile.jpg);
+    }
 }
 
 .info-contact {
     padding: 10rem 16rem;
 
+    @include respond(phone) {
+        padding: 5rem 4.3rem;
+    }
+
     &__content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 9rem;
+
+        @include respond(phone) {
+            gap: 5rem;
+            grid-template-columns: 1fr;
+        }
     }
     &__box {
         text-align: left;
@@ -28,6 +46,10 @@
         .img {
             @include img-logo;
         }
+
+        @include respond(phone) {
+            text-align: center;
+        }
     }
 
     &__text {
@@ -35,6 +57,10 @@
             text-transform: uppercase;
             font-weight: 600;
             font-size: 2rem;
+            @include respond(phone) {
+                text-align: center;
+                font-size: 1.8rem;
+            }
         }
         ul li {
             list-style: none;
@@ -51,6 +77,10 @@
             a {
                 text-decoration: none;
                 color: $color-grey-dark-3;
+            }
+
+            @include respond(phone) {
+                gap: 1.6rem;
             }
         }
     }
@@ -84,8 +114,11 @@
 
     &__form {
         margin: 0 5rem;
-
+        @include respond(phone) {
+            margin: 0;
+        }
         h2 {
+            text-align: center;
             margin-bottom: 3rem;
         }
         .form-combo {

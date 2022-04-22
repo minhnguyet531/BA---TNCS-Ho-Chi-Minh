@@ -25,44 +25,65 @@
     </head>
     <body>
         <header class="header" id="header">
-            <div class="header__logo-box">
+            <div class="header-large">
+                <div class="header__logo-box">
+                    <img
+                        src="./img/logo/logoBA.jpg"
+                        alt="Logo BA"
+                        class="header__logo"
+                    />
+                    <div class="header__text">Học viện Ngân Hàng</div>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__nav--item">
+                        <li>
+                            <a href="" class="header__nav--link">
+                                Tổng quan về Đại hội
+                            </a>
+                        </li>
+                        <li class="header__nav--hover">
+                            <a href="" class="header__nav--link">
+                                Chương trình đại hội
+                                <ion-icon name="chevron-down-outline">
+                                </ion-icon>
+                            </a>
+
+                            <ul class="header__nav--subnav">
+                                <li>
+                                    <a href=""> Các hoạt động chào mừng </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__nav--hover">
+                            <a href="" class="header__nav--link">
+                                Báo cáo chính trị
+                                <ion-icon
+                                    name="chevron-down-outline"
+                                ></ion-icon>
+                            </a>
+                            <ul class="header__nav--subnav">
+                                <li>
+                                    <a href="">
+                                        Kết quả thực hiện các chỉ tiêu cơ bản
+                                    </a>
+                                </li>
+                                <li><a href=""> Dấu ấn một nhiệm kỳ </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="btn btn--blue">Liên hệ</button>
+            </div>
+
+            <!-- Header Mobile -->
+            <div class="header-mobile">
+                <ion-icon name="home"></ion-icon>
                 <img
                     src="./img/logo/logoBA.jpg"
                     alt="Logo BA"
                     class="header__logo"
                 />
-                <div class="header__text">Học viện Ngân Hàng</div>
             </div>
-            <nav class="header__nav">
-                <ul class="header__nav--item">
-                    <li><a href=""> Tổng quan về Đại hội </a></li>
-                    <li class="header__nav--hover">
-                        <a href="">
-                            Chương trình đại hội
-                            <ion-icon name="chevron-down-outline"> </ion-icon>
-                        </a>
-
-                        <ul class="header__nav--subnav">
-                            <li><a href=""> Các hoạt động chào mừng </a></li>
-                        </ul>
-                    </li>
-                    <li class="header__nav--hover">
-                        <a href="">
-                            Báo cáo chính trị
-                            <ion-icon name="chevron-down-outline"></ion-icon>
-                        </a>
-                        <ul class="header__nav--subnav">
-                            <li>
-                                <a href="">
-                                    Kết quả thực hiện các chỉ tiêu cơ bản
-                                </a>
-                            </li>
-                            <li><a href=""> Dấu ấn một nhiệm kỳ </a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <button class="btn btn--blue">Liên hệ</button>
         </header>
 
         <main>
@@ -337,7 +358,7 @@
             </section>
 
             <section class="section-slider-1-col">
-                <div class="slider-header">
+                <div class="heading-secondary">
                     <h1>Dấu ấn nhiệm kỳ</h1>
                 </div>
 
@@ -374,7 +395,10 @@
             </section>
 
             <section class="section-slider-2-cols">
-                <h1>Chả bt đặt tên ntn -.- tạm để v đã. Mai lm tiếp hihi</h1>
+                <h1 class="heading-title">
+                    Kết quả thực hiện các chỉ tiêu cơ bản nghị quyết đại hội đại
+                    biểu lần thứ VIII, nhiệm kỳ 2021-2022
+                </h1>
                 <div class="slider__group">
                     <div class="slider--left">
                         <img
